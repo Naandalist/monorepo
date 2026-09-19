@@ -61,5 +61,8 @@ minimumReleaseAgeExclude:
 overrides:
     '@repo/shared-ui>@types/react': ^19.2.14
     '@repo/shared-ui>@types/react-dom': ^19.2.5
+    # Pin sharp across the workspace so Next/Astro/Strapi cannot resolve
+    # 0.35.3 (libheif AVIF heap overflow, GHSA-rgj7-g3m4-5g8c).
+    sharp: 0.35.4
 
 nodeLinker: hoisted
